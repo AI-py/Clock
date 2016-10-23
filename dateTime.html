@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date and Time</title>
+	<style type="text/css">
+		#hms {
+			position: fixed;
+			width: 250px;
+			height: 50px;
+			font-family: Arial;
+			font-size: 30px;
+			text-align: center;
+			left: 558px;
+			top: 260px;
+		}
+
+		#dmy {
+			position: fixed;
+			width: 250px;
+			height: 50px;
+			font-family: Arial;
+			font-size: 30px;
+			text-align: center;
+			left: 558px;
+			top: 300px;
+		}
+
+		body {
+			background-color: lightgreen;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function go() {
+			var date = new Date();
+			var hrs = date.getHours();
+			if (hrs < 10) {var hrs = "0" + hrs;}
+			var mins = date.getMinutes();
+			if (mins < 10) {var mins = "0" + mins;}
+			var secs = date.getSeconds();
+			if (secs < 10) {var secs = "0" + secs;}
+			var day = date.getDate();
+			if (day < 10) {var day = "0" + day;}
+			var month = date.getMonth() +1;
+			if (month < 10) {var month = "0" + month;}
+			document.getElementById("hms").innerHTML = hrs + ":" + mins + ":" + secs;
+			document.getElementById("dmy").innerHTML =day + "/" + month + "/" + date.getFullYear();
+		}
+		setInterval(go, 1000);
+	</script>
+
+</head>
+<body>
+	<div id="hms"></div>
+	<div id="dmy"></div>
+</body>
+</html>
