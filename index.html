@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Clock by AI-py</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Clock</h1>
+        <h2>A simple JS time and date display</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/AI-py/Clock/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/AI-py/Clock/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/AI-py/Clock" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="clock" class="anchor" href="#clock" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Clock</h1>
+
+<p>&lt;!DOCTYPE html&gt;
+
+</p>
+    Date and Time
+    
+        #hms {
+            position: fixed;
+            width: 250px;
+            height: 50px;
+            font-family: Arial;
+            font-size: 30px;
+            text-align: center;
+            left: 558px;
+            top: 260px;
+        }
+        #dmy {
+            position: fixed;
+            width: 250px;
+            height: 50px;
+            font-family: Arial;
+            font-size: 30px;
+            text-align: center;
+            left: 558px;
+            top: 300px;
+        }
+        body {
+            background-color: lightgreen;
+        }
+    
+
+<pre><code>&lt;script type="text/javascript"&gt;
+    function go() {
+        var date = new Date();
+        var hrs = date.getHours();
+        if (hrs &lt; 10) {var hrs = "0" + hrs;}
+        var mins = date.getMinutes();
+        if (mins &lt; 10) {var mins = "0" + mins;}
+        var secs = date.getSeconds();
+        if (secs &lt; 10) {var secs = "0" + secs;}
+        var day = date.getDate();
+        if (day &lt; 10) {var day = "0" + day;}
+        var month = date.getMonth() +1;
+        if (month &lt; 10) {var month = "0" + month;}
+        document.getElementById("hms").innerHTML = hrs + ":" + mins + ":" + secs;
+        document.getElementById("dmy").innerHTML =day + "/" + month + "/" + date.getFullYear();
+    }
+    setInterval(go, 1000);
+&lt;/script&gt;
+</code></pre>
+
+<p>
+</p>
+    <div id="hms"></div>
+    <div id="dmy"></div>
+
+
+      </section>
+    </div>
+
+    
+  </body>
+</html>
